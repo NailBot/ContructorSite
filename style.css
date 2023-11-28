@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* background: red; */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    overflow: auto;
+    
+    /* height: 100vh;
+    width: 100%; */
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+.overlay {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(5px); */
+    color: white;
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.overlay__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overlay__description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.options {
+    margin-bottom: 30px;
+}
+
+.scrollable-row {
+    display: flex;
+    overflow-x: auto; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
+}
+
+
+button {
+    display: block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 5px;
+    background-color: #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #f8f8f8;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card.selected {
+    background-color: #f8f8f8;
+}
+#usercard{
+    text-align: center;
+}
+@keyframes color {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+
+/* body{
+	color: var(--tg-theme-text-color);
+	background: var(--tg-theme-bg-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 18px;
+}
+
+.scrollable-row {
+    display: flex;
+    overflow-x: auto; /* Добавлено свойство overflow-x 
+    max-width: 100%; /* Ширина не превышает ширину экрана 
+    margin-bottom: 20px; /* Добавлено для отступа между строками 
+}
+
+.card {
+    width: 100px;
+    height: 130px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; 
+    color:  #0056b3;
+    margin: 10px;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* button:hover {
+    background-color: #0056b3;
+} 
+
+.card.selected {
+    background-color: #a0d3f7; /* Цвет выбранной карточки 
+}
+#usercard{
+    text-align: center;
+} */
